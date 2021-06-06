@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: app1
   annotations:
-    argocd.argoproj.io/sync-wave: "-2"
+    argocd.argoproj.io/sync-wave: "-5"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -25,7 +25,7 @@ kind: Application
 metadata:
   name: app2
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-4"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -46,6 +46,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app3
+  annotations:
+    argocd.argoproj.io/sync-wave: "-3"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -66,6 +68,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app4
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -86,6 +90,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app5
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
