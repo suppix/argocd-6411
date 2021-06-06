@@ -14,7 +14,9 @@ spec:
     repoURL: https://github.com/suppix/argocd-6411.git
     targetRevision: 'HEAD'
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -32,7 +34,9 @@ spec:
     repoURL: https://github.com/suppix/argocd-6411.git
     targetRevision: 'HEAD'
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -48,7 +52,9 @@ spec:
     repoURL: https://github.com/suppix/argocd-6411.git
     targetRevision: 'HEAD'
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -64,7 +70,9 @@ spec:
     repoURL: https://github.com/suppix/argocd-6411.git
     targetRevision: 'HEAD'
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -80,4 +88,6 @@ spec:
     repoURL: https://github.com/suppix/argocd-6411.git
     targetRevision: 'HEAD'
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
