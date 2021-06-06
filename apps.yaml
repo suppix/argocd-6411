@@ -4,8 +4,8 @@ metadata:
   name: app1
   annotations:
     argocd.argoproj.io/sync-wave: "-2"
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: default
@@ -26,8 +26,8 @@ metadata:
   name: app2
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: default
@@ -47,7 +47,7 @@ kind: Application
 metadata:
   name: app3
   finalizers:
-      - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: default
@@ -67,7 +67,7 @@ kind: Application
 metadata:
   name: app4
   finalizers:
-      - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: default
@@ -87,7 +87,7 @@ kind: Application
 metadata:
   name: app5
   finalizers:
-      - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: default
