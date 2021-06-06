@@ -1,0 +1,83 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
+spec:
+  destination:
+    namespace: default
+    name: in-cluster
+  project: default
+  source:
+    path: 'app1'
+    repoURL: https://github.com/suppix/argocd-6411.git
+    targetRevision: 'HEAD'
+  syncPolicy:
+    automated: {}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  destination:
+    namespace: default
+    name: in-cluster
+  project: default
+  source:
+    path: 'app2'
+    repoURL: https://github.com/suppix/argocd-6411.git
+    targetRevision: 'HEAD'
+  syncPolicy:
+    automated: {}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app3
+spec:
+  destination:
+    namespace: default
+    name: in-cluster
+  project: default
+  source:
+    path: 'app3'
+    repoURL: https://github.com/suppix/argocd-6411.git
+    targetRevision: 'HEAD'
+  syncPolicy:
+    automated: {}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app4
+spec:
+  destination:
+    namespace: default
+    name: in-cluster
+  project: default
+  source:
+    path: 'app4'
+    repoURL: https://github.com/suppix/argocd-6411.git
+    targetRevision: 'HEAD'
+  syncPolicy:
+    automated: {}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app5
+spec:
+  destination:
+    namespace: default
+    name: in-cluster
+  project: default
+  source:
+    path: 'app5'
+    repoURL: https://github.com/suppix/argocd-6411.git
+    targetRevision: 'HEAD'
+  syncPolicy:
+    automated: {}
